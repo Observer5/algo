@@ -6,7 +6,7 @@ namespace Algo\Stack;
 
 use Algo\Linked\SingleLinkedListNode;
 
-class StackOnLinkedList
+class LinkedStack
 {
     /**
      * 单链表头节点（哨兵节点)
