@@ -11,7 +11,7 @@ final class SortTest extends TestCase
 {
     public function testBubbleSortResult()
     {
-        $arr = $arr = array(43, 21, 2, 1, 9, 24, 2, 99, 23, 8, 7, 114, 92, 5);
+        $arr = array(43, 21, 2, 1, 9, 24, 2, 99, 23, 8, 7, 114, 92, 5);
 
         $result = (new Bubble())->main($arr);
 
