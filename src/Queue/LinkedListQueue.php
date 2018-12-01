@@ -46,7 +46,12 @@ class LinkedListQueue
         $this->length++;
     }
 
-    // 出队
+
+    /**
+     * 出队
+     *
+     * @return bool|SingleLinkedListNode
+     */
     public function dequeue()
     {
         if ($this->length === 0) {
