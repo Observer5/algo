@@ -9,26 +9,61 @@ namespace Algo\Sort;
 
 class Bubble
 {
-    public function main($arr)
+    /**
+     * 向下冒泡算法
+     *
+     * @param array $arr
+     *
+     * @return array
+     */
+    public function sort(array $arr)
     {
         $count = count($arr);
         if ($count < 2) {
             return $arr;
         }
 
-        // 第一层for循环可以理解为从数组中键为0开始循环到最后一个
         for ($i = 0; $i < $count; $i++) {
-            // 比较数组中相邻两个值的大小
+            $flag = false;
             for ($j = $i + 1; $j < $count; $j++) {
                 if ($arr[$i] > $arr[$j]) {
-                    $tmp = $arr[$i]; // 这里的tmp是临时变量
-                    $arr[$i] = $arr[$j]; // 第一次更换位置
-                    $arr[$j] = $tmp;            // 完成位置互换
+                    $tmp = $arr[$j];
+                    $arr[$j] = $arr[$i];
+                    $arr[$i] = $tmp;
+                    $flag = true;
                 }
             }
+            if ($flag === false) {
+                break;
+            }
         }
-
         return $arr;
     }
+
+    public function sort2(array $arr)
+    {
+        $count = count($arr);
+        if ($count < 2) {
+            return $arr;
+        }
+
+        for ($i = 0; $i < $count; $i++) {
+            $flag = false;
+            for ($j = 0; $j < $count - $i - 1; $j++) {
+                if ($arr[$j] > $arr[$j + 1]) {
+                    $tmp = $arr[$j + 1];
+                    $arr[$j + 1] = $arr[$j];
+                    $arr[$j] = $tmp;
+                    $flag = true;
+                }
+            }
+
+            if ($flag === false) {
+                break;
+            }
+        }
+        return $arr;
+    }
+
 }
 

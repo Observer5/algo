@@ -1,3 +1,3 @@
 #tests
 
-./vendor/bin/phpunit --bootstrap vendor/autoload.php tests/SortTest.php
+./vendor/bin/phpunit --bootstrap tests
