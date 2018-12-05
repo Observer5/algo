@@ -19,7 +19,9 @@ final class SortTest extends TestCase
         $arr = array(2, 5, 3, 0, 2, 3, 0, 3);
         $result = (new Counting())->sort($arr);
 
-        var_dump($result);
+        sort($arr);
+        
+        $this->assertEquals($arr, $result);
     }
 
     public function testBubbleSortResult()
