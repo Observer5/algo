@@ -1,6 +1,7 @@
 <?php
 
 use Algo\Sort\Bubble;
+use Algo\Sort\Counting;
 use Algo\Sort\Insert;
 use Algo\Sort\Merge;
 use Algo\Sort\Quick;
@@ -9,9 +10,18 @@ use PHPUnit\Framework\TestCase;
 
 final class SortTest extends TestCase
 {
+
     /**
      * @group sort
      */
+    public function testCountingResult()
+    {
+        $arr = array(2, 5, 3, 0, 2, 3, 0, 3);
+        $result = (new Counting())->sort($arr);
+
+        var_dump($result);
+    }
+
     public function testBubbleSortResult()
     {
         $arr = array(43, 21, 2, 1, 9, 24, 2, 99, 23, 8, 7, 114, 92, 5);
